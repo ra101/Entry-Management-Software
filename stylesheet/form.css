@@ -1,0 +1,134 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  height: 100vh;
+}
+
+#header {
+  background: radial-gradient(rgb(27, 145, 230), rgb(30, 56, 85));
+  position: fixed;
+  top: 0px;
+  height: 50px;
+  width: 90%;
+  margin-left: 5%;
+  font-weight: bold;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  font-size: 30px;
+  color: white;
+  opacity: 0.8;
+  text-align: center;
+}
+
+#header.green {
+  background: radial-gradient(rgba(51, 210, 57, 1), rgb(35, 92, 17));
+}
+
+#arrow {
+  background-color: rgb(199, 225, 255);
+  position: absolute;
+  font-size: 30px;
+  border-radius: 10%;
+  border: none;
+  top: 7px;
+  left: 30px;
+}
+
+#arrow:hover {
+  background: black;
+  cursor: pointer;
+}
+
+label {
+  font: 24px;
+  padding-top: 5px;
+  color: white;
+}
+
+input,
+textarea {
+  font-size: 24px;
+  width: 100%;
+  text-align: center;
+  border: none;
+  background: none;
+  color: white;
+}
+select,
+option {
+  font-size: 24px;
+  width: 100%;
+  text-align: center;
+  border: none;
+  border-radius: 50px;
+  color: white;
+  background: rgb(35, 92, 17);
+  text-align: center;
+  padding: 10px;
+}
+select.blue,
+option.blue {
+  font-size: 24px;
+  width: 100%;
+  text-align: center;
+  border: none;
+  border-radius: 50px;
+  color: white;
+  background: rgb(30, 56, 85);
+  text-align: center;
+  padding: 10px;
+}
+
+textarea:focus,
+input:focus {
+  outline: none;
+  border-bottom: solid darkred;
+}
+
+button {
+  width: 80%;
+  background-color: rgb(27, 145, 230);
+  font-size: 30px;
+  color: white;
+  border-radius: 30px;
+  border: none;
+}
+button:hover {
+  background: white;
+  border: solid 2px rgb(27, 145, 230);
+  color: rgb(27, 145, 230);
+  cursor: pointer;
+  outline: none;
+}
+
+button:focus {
+  border: solid 2px white;
+  outline: none;
+}
+
+button#back {
+  width: 48px;
+  display: absolute;
+  display: block;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  padding: 7px;
+  text-align: center;
+  padding: 10px;
+  border: none;
+  bottom: 20%;
+  left: 20%;
+  font-size: large;
+  font-weight: bold;
+  box-shadow: 1px 1px rgb(0, 0, 0, 0.25);
+}
+button.green {
+  color: white;
+  background: rgba(51, 210, 57, 1);
+}
+button.green:hover {
+  background: white;
+  color: rgba(51, 210, 57, 1);
+}
+form {
+  margin-top: 30px;
+}

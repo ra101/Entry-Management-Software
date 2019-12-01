@@ -1,0 +1,144 @@
+#wrapper {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 10% 35% 10% 35% 10%;
+  grid-template-rows: 20% 40% 5% 10% 10% 3% 10%;
+}
+
+body {
+  background: -webkit-linear-gradient(
+    -25deg,
+    rgb(30, 56, 85) 0%,
+    rgba(27, 147, 230, 1) 47%,
+    lightpink 48%,
+    rgba(51, 210, 57, 1) 48%,
+    rgba(49, 128, 23, 1) 100%
+  );
+}
+
+div#welcome {
+  grid-column-start: 1;
+  grid-column-end: 6;
+  text-align: center;
+  font-family: sans-serif;
+  display: block;
+  top: 0px;
+  width: 110%;
+  left: -10px;
+  grid-row: 1;
+  color: rgb(243, 129, 177);
+
+  box-shadow: 3px 3px 5px lightpink;
+  background: white;
+  position: absolute;
+}
+
+div#ems {
+  grid-row: 4;
+  grid-column-start: 2;
+  grid-column-end: 5;
+  text-align: center;
+  font-family: sans-serif;
+  color: rgb(243, 129, 177);
+  font-weight: bold;
+  background: white;
+  font-size: 32px;
+  border-radius: 100px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  border: solid pink;
+}
+
+#host {
+  grid-column: 2;
+  grid-row: 2;
+  display: grid;
+  grid-template-columns: 20% 15% 30% 15% 20%;
+  grid-template-rows: 25% 20% 55%;
+}
+
+#vistor {
+  grid-column: 4;
+  grid-row: 2;
+  display: grid;
+  grid-template-columns: 20% 15% 30% 15% 20%;
+  grid-template-rows: 25% 20% 55%;
+}
+
+img {
+  width: 100%;
+  grid-column-start: 1;
+  grid-column-end: 6;
+  grid-row-start: 1;
+  grid-row-end: 4;
+}
+
+button {
+  background: rgb(27, 145, 230);
+  border-radius: 50%;
+  color: white;
+  padding: 7px;
+  text-align: center;
+  vertical-align: middle;
+  border: none;
+  font-size: large;
+  font-weight: bold;
+  box-shadow: 1px 1px rgb(0, 0, 0, 0.25);
+  grid-row: 2;
+}
+
+button:hover {
+  color: rgb(27, 145, 230);
+  background: rgb(199, 225, 255);
+  border: solid 2px rgb(27, 145, 230);
+
+  cursor: pointer;
+  outline: none;
+}
+
+button#ok {
+  background: rgba(51, 210, 57, 1);
+}
+button#ok:hover {
+  color: rgba(51, 210, 57, 1);
+  background: rgb(174, 255, 177);
+  border: solid 2px rgba(51, 210, 57, 1);
+  cursor: pointer;
+  outline: none;
+}
+
+button.left {
+  grid-column: 2;
+}
+
+button.right {
+  grid-column: 4;
+}
+
+button:disabled {
+  background: gray;
+  color: lightgray;
+  border: none;
+}
+
+button:disabled:hover {
+  background: gray;
+  color: lightgray;
+  border: none;
+  cursor: default;
+  outline: none;
+}
+
+button#ok:disabled {
+  background: gray;
+  color: lightgray;
+  border: none;
+}
+
+button#ok:disabled:hover {
+  background: gray;
+  color: lightgray;
+  border: none;
+  cursor: default;
+  outline: none;
+}
