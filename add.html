@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Entry Management Software</title>
+    <style>
+      ::-webkit-scrollbar {
+        display: none;
+      }
+    </style>
+    <link rel="stylesheet" href="./stylesheet/form.css" />
+    <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-app.js"></script>
+  </head>
+  <body
+    style="overflow: hidden;background: radial-gradient(rgb(27, 145, 230), rgb(30, 56, 85));"
+  >
+  <button id="back" onclick="linker('app')" title="Back to Main Page">
+    &nbsp;&larr;&nbsp;
+  </button>
+    <div id="header">
+      Add Host Form
+    </div>
+    <form>
+      <label>Name: </label><br>
+      <!-- placeholder from summergeek -->
+      <input name="name" id="name" placeholder="Vishesh Singh" /><br><br>
+      <label>Email: </label><br>
+      <input name="email" id="email" placeholder="vs@xyz.com" /><br><br>
+      <label>Phone: </label><br>
+      <input name="no" id="no" placeholder="000000000" /><br><br>
+      <label>Address: </label><br>
+      <input
+        name="adr"
+        id="adr"
+      ><br><br>
+      <center><button type="button" onclick="validate('adr')">Add</button></center>
+    <script src="./scripts/form.js"></script>
+  </body>
+</html>
