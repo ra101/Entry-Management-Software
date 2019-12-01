@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Entry Management Software</title>
+    <link rel="stylesheet" href="./stylesheet/form.css" />
+  </head>
+  <body
+    style="overflow: hidden;background: radial-gradient(rgba(51, 210, 57, 1),rgba(49, 128, 23, 1));"
+  >
+    <button
+      id="back"
+      onclick="linker('app')"
+      class="green"
+      title="Back to Main Page"
+    >
+      &nbsp;&larr;&nbsp;
+    </button>
+    <div id="header" class="green">Check Out?</div>
+    <select id="visits" style="margin-top:20%"
+      ><br /><br />
+      <option selected></option> </select
+    ><br /><br />
+    <center>
+      <button
+        type="button"
+        onclick="remove('visits')"
+        style="margin-top: 10%;"
+        class="green"
+      >
+        Check Out
+      </button>
+    </center>
+    <script>
+      const { remote } = require("electron");
+      firebase = remote.getGlobal("firey");
+      let firebaseRef = firebase.database().ref("visits");
+
+      firebaseRef.once("value").then(visitors_list => {
+        if (visitors_list.exists()) {
+          visitors_list.forEach(visitor => {
+            let { time_out, name } = visitor.val();
+            //if visitor still in session then time_out is -1
+            if (time_out == -1) {
+              let temp = document.createElement("option");
+              temp.innerText = name;
+              temp.id = visitor.key;
+              document.getElementById("visits").appendChild(temp);
+            }
+          });
+        }
+      });
+    </script>
+    <!-- to send msg -->
+    <script src="./scripts/messaging.js"></script>
+
+    <script src="./scripts/display.js"></script>
+  </body>
+</html>
