@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Entry Management Software</title>
+    <link rel="stylesheet" href="./stylesheet/form.css" />
+  </head>
+  <body
+    style="overflow: hidden;background: radial-gradient(rgba(51, 210, 57, 1),rgba(49, 128, 23, 1));"
+  >
+    <button
+      id="back"
+      class="green"
+      onclick="linker('app')"
+      title="Back to Main Page"
+    >
+      &nbsp;&larr;&nbsp;
+    </button>
+    <div id="header" class="green">Check In Form</div>
+
+    <form>
+      <!-- placeholder from summergeek -->
+      <label>Name: </label><br />
+      <input id="name" name="name" placeholder="Anant Sharma" /><br /><br />
+      <label>Email: </label><br />
+      <input
+        id="email"
+        name="email"
+        placeholder="a.sharma@xyz.com"
+      /><br /><br />
+      <label>Phone: </label><br />
+      <input name="no" id="no" placeholder="9999999999" /><br /><br />
+      <label>Host: </label><br />
+      <select id="host"
+        ><br /><br />
+        <option selected></option> </select
+      ><br /><br />
+      <center>
+        <button type="button" class="green" onclick="validate('host')">
+          Check In
+        </button>
+      </center>
+    </form>
+    <script>
+      const { remote } = require("electron");
+      firebase = remote.getGlobal("firey");
+      let firebaseRef = firebase.database().ref("host");
+
+      //Code for adding options in select tag
+      firebaseRef.once("value").then(host_list => {
+        if (host_list.exists()) {
+          host_list.forEach(host => {
+            let { name, session } = host.val();
+
+            //session can be true(host not available),invalid(host removed) or false(host available)!
+            if (session == false) {
+              let temp = document.createElement("option");
+              temp.innerText = name;
+              temp.id = host.key;
+              //adding host that are available
+              document.getElementById("host").appendChild(temp);
+            }
+          });
+        }
+      });
+    </script>
+    <!-- to send msg -->
+    <script src="./scripts/messaging.js"></script>
+
+    <script src="./scripts/form.js"></script>
+  </body>
+</html>
