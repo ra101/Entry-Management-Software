@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Entry Management Software</title>
+    <link rel="stylesheet" href="./stylesheet/app.css" />
+    <!-- these scripts are added in head for faster unlocking of buttons -->
+    <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-app.js"></script>
+    <script src="./scripts/app.js"></script>
+  </head>
+  <body style="overflow: hidden;">
+    <div id="wrapper">
+      <div id="welcome"><h1>Welcome!</h1></div>
+      <div id="host">
+        <img src="./images/host.png" />
+        <button id="ok" class="left" title="Add Host" onclick="linker('add')">
+          &nbsp;+&nbsp;
+        </button>
+
+        <button
+          id="ok"
+          class="right"
+          title="Remove Host"
+          onclick="linker('min')"
+        >
+          &nbsp;-&nbsp;
+        </button>
+      </div>
+      <div id="vistor">
+        <img src="./images/visitor.PNG" />
+        <button class="left" title="Check In" onclick="linker('in')">
+          &nbsp;&uarr;&nbsp;
+        </button>
+        <button class="right" title="Check Out" onclick="linker('out')">
+          &nbsp;&darr;&nbsp;
+        </button>
+      </div>
+      <div id="ems">Entry Management Software</div>
+      <div id="blank1" style="grid-row: 5;"></div>
+      <div id="blank2" style="grid-row: 7;"></div>
+    </div>
+    <script>
+      //disabling host-remove,chek-in, check-out buttons
+      document.getElementsByTagName("button")[1].disabled = "true";
+      document.getElementsByTagName("button")[2].disabled = "true";
+      document.getElementsByTagName("button")[3].disabled = "true";
+
+      //this function ,yes the one right below this comment is the heart of application
+      function linker(link) {
+        window.location.href = `./${link}.html`;
+      }
+    </script>
+  </body>
+</html>
