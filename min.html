@@ -1,0 +1,47 @@
+<!-- host removal -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Entry Management Software</title>
+    <link rel="stylesheet" href="./stylesheet/form.css" />
+  </head>
+  <body
+    style="overflow: hidden;background: radial-gradient(rgb(27, 145, 230), rgb(30, 56, 85));"
+  >
+    <button id="back" onclick="linker('app')" title="Back to Main Page">
+      &nbsp;&larr;&nbsp;
+    </button>
+    <div id="header">Host Removal Form</div>
+    <select id="host" style="margin-top:20%" class="blue"
+      ><br /><br />
+      <option selected class="blue"></option> </select
+    ><br /><br />
+    <center>
+      <button type="button" onclick="remove('host')" style="margin-top: 10%;">
+        Remove Host
+      </button>
+    </center>
+    <script>
+      const { remote } = require("electron");
+      firebase = remote.getGlobal("firey");
+      let firebaseRef = firebase.database().ref("host");
+
+      firebaseRef.once("value").then(host_list => {
+        if (host_list.exists()) {
+          host_list.forEach(host => {
+            let { name, session } = host.val();
+            //"ivalid" is a string which is true, only session===false will pass through it
+            if (!session) {
+              let temp = document.createElement("option");
+              temp.innerText = name;
+              temp.className = "blue"; //for css
+              temp.id = host.key;
+              document.getElementById("host").appendChild(temp); //adding it to select
+            }
+          });
+        }
+      });
+    </script>
+    <script src="./scripts/display.js"></script>
+  </body>
+</html>
