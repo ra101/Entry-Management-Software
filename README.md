@@ -228,12 +228,6 @@ Or if you're on Windows:
 
 
 
-## Gallery
-
-<p align="center">
-  <!--yet to be filled -->
-</p>
-
 ## Credit/Acknowledgment
 
 [![Contributors](https://img.shields.io/github/contributors/ra101/Entry-Management-Software?style=for-the-badge)](https://github.com/ra101/Entry-Management-Software/graphs/contributors)
