@@ -19,7 +19,6 @@
 - [Usage](#usage)
   - [Installation](#installation)
 - [File Structure](#file-structure)
-- [Gallery](#gallery)
 - [Credit/Acknowledgment](#creditacknowledgment)
 - [License](License)
 
