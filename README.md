@@ -10,24 +10,24 @@
 
 
 
-## Index
+## :card_index_dividers: Index
 
-- [Index](#index)
-- [About](#about)
-  - [Database](#database)
-  - [Workflow](#workflow)
-- [Usage](#usage)
-  - [Installation](#installation)
-- [File Structure](#file-structure)
-- [Credit/Acknowledgment](#creditacknowledgment)
-- [License](License)
+- [Index](#card_index_dividers-index)
+- [About](#briefcase-about)
+  - [Database](#ledger-database)
+  - [Workflow](#chart_with_upwards_trend-workflow)
+- [Usage](#zap-usage)
+  - [Installation](#floppy_disk-installation)
+- [File Structure](#open_file_folder-file-structure)
+- [Credit/Acknowledgment](#star2-creditacknowledgment)
+- [License](#scroll-license)
 
-## About
+## :briefcase: About
 
 It is an <b>Entry Management <i>Cross-Platform</i> Software</b> built using Electron (a Node.js framework)  and Firebase (for database), This app includes Email (Nodemailer Module) and SMS (Nexmo API) automation.
 
 
-### Database
+### :ledger: Database
 
 There are 2 collections: Host and Visits, which have entries as given below...
 
@@ -37,7 +37,7 @@ There are 2 collections: Host and Visits, which have entries as given below...
 
 
 
-### Workflow
+### :chart_with_upwards_trend: Workflow
 
 There are 2 categories <b>Host</b> and <b>Visitor</b> and 2 Constraint that Each Host can be visited by only one visitor and host can cannot leave until visitor leaves.
 
@@ -53,7 +53,7 @@ So, initially there are 4 button:
 
 
 
-#### Add Host
+#### :heavy_plus_sign: Add Host
 
 <p align='center'>
     <img src='./Screenshots/add-host.png'>	
@@ -65,7 +65,7 @@ A form that stores Name,Email, Phone No and Address(abc) given by host ontu fire
 
 
 
-#### Remove Host 
+#### :heavy_minus_sign: Remove Host 
 
 <p align='center'>
     <img src='./Screenshots/remove-host.png'>	
@@ -79,7 +79,7 @@ This makes Data remain in database and yet not included in visiting process
 
 
 
-#### Check-In
+#### :arrow_up:	Check-In
 
 <p align='center'>
     <img src='./Screenshots/check-in.png'>	
@@ -97,7 +97,7 @@ After this Email and a SMS is sent to Host using selected ID, stating the detail
 
 
 
-#### Check-Out
+#### :arrow_down:	Check-Out
 
 <p align='center'>
     <img src='./Screenshots/check-out.png'>	
@@ -113,11 +113,11 @@ After this Email and a SMS is sent to Visitor, stating the details of zer visit.
 
 
 
-## Usage
+## :zap: Usage
 
-### Installation
+### :floppy_disk: Installation
 
-**Development**
+:gear: **Development**
 
 If you just want to do a simple test run of the application, you can  first
 
@@ -189,7 +189,7 @@ Or if you're on Windows:
 
 
 
-## File Structure
+## :open_file_folder: File Structure
 
 - Add a file structure here with the basic details about files, below is an example.
 
@@ -227,10 +227,10 @@ Or if you're on Windows:
 
 
 
-## Credit/Acknowledgment
+## :star2: Credit/Acknowledgment
 
 [![Contributors](https://img.shields.io/github/contributors/ra101/Entry-Management-Software?style=for-the-badge)](https://github.com/ra101/Entry-Management-Software/graphs/contributors)
 
-## License
+## :scroll: License
 
 [![License](https://img.shields.io/github/license/ra101/Entry-Management-Software?style=for-the-badge)](https://github.com/ra101/Entry-Management-Software/blob/master/LICENSE)
