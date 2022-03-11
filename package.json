@@ -14,7 +14,7 @@
     "dotenv": "^8.2.0",
     "firebase": "^7.5.0",
     "nexmo": "^2.5.1",
-    "nodemailer": "^6.3.1"
+    "nodemailer": "^6.6.1"
   },
   "devDependencies": {
     "electron": "^7.1.3",
